@@ -98,7 +98,7 @@ body {
 
 .bulb-container {
     width: 300px;
-    height: 500px;
+    height: 25%;
     position: absolute;
     top: 0;
     display: flex;
@@ -110,7 +110,7 @@ body {
 }
 .wire {
     width: 4px;
-    height: 200px;
+    height: 30%;
     background: black;
     position: relative;
     z-index: 1;
@@ -134,12 +134,12 @@ body {
 }
 .bulb {
     margin-top: -2px;
-    width: 92px;
+    width: 78px;
     aspect-ratio: 1;
     border-radius: 50%;
     background: #ffeb00;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +183,7 @@ body {
     }
     1% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     1.001% {
         background: rgba(255, 255, 255, 0.1);
@@ -195,7 +195,7 @@ body {
     }
     11.001% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     11.002% {
         background: rgba(255, 255, 255, 0.1);
@@ -203,13 +203,13 @@ body {
     }
     12% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
 
     /*    */
     39.999% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     40% {
         background: rgba(255, 255, 255, 0.1);
@@ -217,7 +217,7 @@ body {
     }
     41% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     41.001% {
         background: rgba(255, 255, 255, 0.1);
@@ -232,7 +232,7 @@ body {
     }
     75.5% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     75.501% {
         background: rgba(255, 255, 255, 0.1);
@@ -247,7 +247,7 @@ body {
     }
     81.001% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     81.002% {
         background: rgba(255, 255, 255, 0.1);
@@ -255,11 +255,11 @@ body {
     }
     82% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     82.001% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     82.002% {
         background: rgba(255, 255, 255, 0.1);
@@ -267,7 +267,7 @@ body {
     }
     83% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     83.001% {
         background: rgba(255, 255, 255, 0.1);
@@ -275,7 +275,7 @@ body {
     }
     83.002% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
     83.003% {
         background: rgba(255, 255, 255, 0.1);
@@ -283,6 +283,6 @@ body {
     }
     88% {
         background: rgba(255, 235, 0, 1);
-        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+        box-shadow: 0px 0px 80px 35px rgba(245, 223, 77, 1);
     }
 }
