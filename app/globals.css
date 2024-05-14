@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(44, 44, 44);
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    border: none;
+}
+
+.button:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+/* bell ringing animation keyframes*/
+
+.button:active {
+    transform: scale(0.8);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    color: white;
+}
+
+.container .label {
+    font-size: 15px;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input {
+    width: 178px;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+    border: 2px solid transparent;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4),
+        inset 3px 3px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+    transition: 0.3s;
+    padding-left: 2px;
+    transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
+        -1px -1px 6px rgba(255, 255, 255, 0.4),
+        inset 3px 3px 10px rgba(0, 0, 0, 1),
+        inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+/* light bulb */
+
+body {
+    background-color: #1d1e22;
+}
+
+.bulb-container {
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    transform-origin: top;
+    animation: swing 3s ease-in-out infinite;
+}
+.wire {
+    width: 4px;
+    height: 200px;
+    background: black;
+    position: relative;
+    z-index: 1;
+}
+.connector {
+    background: #292929;
+    width: 30px;
+    aspect-ratio: 4/5;
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+.grove {
+    background: #424242;
+    width: 34px;
+    height: 3px;
+    z-index: 3;
+}
+.bulb {
+    margin-top: -2px;
+    width: 92px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #ffeb00;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: -1px;
+    z-index: 1;
+    animation: flash 10s linear infinite;
+}
+.metal-wire {
+    position: relative;
+    border: 1px solid black;
+    width: 22px;
+    height: 11px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.metal-wire:nth-child(1) {
+    top: -1px;
+}
+.metal-wire:nth-child(2) {
+    top: -7px;
+}
+.metal-wire:nth-child(3) {
+    top: -13px;
+}
+@keyframes swing {
+    0% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+@keyframes flash {
+    0% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    1% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    1.001% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    10% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    11.001% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    11.002% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    12% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+
+    /*    */
+    39.999% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    40% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    41% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    41.001% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*    */
+
+    75% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    75.5% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    75.501% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    /*    */
+
+    80% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    81.001% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    81.002% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    82% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    82.001% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    82.002% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    83% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    83.001% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    83.002% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+    83.003% {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    88% {
+        background: rgba(255, 235, 0, 1);
+        box-shadow: 0px 0px 100px 50px rgba(245, 223, 77, 1);
+    }
+}
