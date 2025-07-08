@@ -1,3 +1,5 @@
+# SLC - Smart Light Control
+
 Allows a user to controll a Smartlife smart light with a web app.
 Just need a pin.
 
